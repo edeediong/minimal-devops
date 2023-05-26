@@ -14,7 +14,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Build and Publish Image
-        run: |
-          docker build -t ghcr.io/${{ github.repository }}:1 .
-          docker push ghcr.io/${{ github.repository }}:1 .
+      - name: Build Image
+        run: docker build -t ghcr.io/${{ github.repository }}:1 .
+
+      - name: Publish Image
+        run: docker push ghcr.io/${{ github.repository }}:1
