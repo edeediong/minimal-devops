@@ -12,3 +12,11 @@ make automate
 ```
 
 > **N/B:** The terraform code creates a local state in the local folder. For production environment, leverage AWS S3 to hold the state and DynamoDB for state locking.
+
+## Cleanup
+
+To cleanup the environment, use the below command
+
+```text
+make destroy
+```
